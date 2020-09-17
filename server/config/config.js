@@ -1,11 +1,11 @@
-/*
-PUERTO
-*/
+// ===========================
+// Puerto
+// ===========================
 process.env.PORT = process.env.PORT || 3000;
 
-/*
-ENTORNO
-*/
+// ===========================
+// Entorno
+// ===========================
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
 // ===========================
@@ -23,9 +23,9 @@ process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 30;
 process.env.SEED = process.env.SEED || 'hola-que-hace-jwt';
 
 
-/*
-BASE DE DATOS
-*/
+// ===========================
+// Base de datos
+// ===========================
 let urlDB;
 if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost/cafe'
@@ -34,3 +34,8 @@ if (process.env.NODE_ENV === 'dev') {
 }
 
 process.env.URLDB = urlDB;
+
+// ===========================
+// Cliente ID de google
+// ===========================
+process.env.CLIENT_ID = process.env.CLIENT_ID || '765035038324-afg6702mpvsr057fdm5grunpbsv1ms57.apps.googleusercontent.com';
